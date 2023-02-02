@@ -37,6 +37,7 @@ console.log(newArr);
       })
       setItem(sortedArr)
     }
+    
    
 
   return <div>
