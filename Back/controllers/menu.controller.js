@@ -39,17 +39,18 @@ exports.create = (request, response) => {
 };
 
 exports.update = (req, res) => {
-  const { id, menuName, link, position } = request.body;
+  const { menuName } = req.body;
+  const {id} = req.params;
   fs.readFile(dataFile, "utf-8", (readErr, data) => {
     if (readErr) {
-      return response.json({ status: false, message: readErr });
+      return res.json({ status: false, message: readErr });
     }
 
     const parsedData = JSON.parse(data);
 
     const updateData = parsedData.map((menuObj) => {
       if (menuObj.id == id) {
-        return { ...menuObj, menuName, link, position };
+        return { ...menuObj, menuName};
       } else {
         return menuObj;
       }
@@ -57,10 +58,10 @@ exports.update = (req, res) => {
 
     fs.writeFile(dataFile, JSON.stringify(updateData), (writeErr) => {
       if (writeErr) {
-        return response.json({ status: false, message: writeErr });
+        return res.json({ status: false, message: writeErr });
       }
 
-      return response.json({ status: true, result: updateData });
+      return res.json({ status: true, result: updateData });
     });
   });
 };

@@ -7,12 +7,13 @@ const {json} = require("body-parser")
 const uuid=require("uuid")
 const menuRouter = require("./routes/menu.route.js")
 const userRouter= require("./routes/users.route.js")
-
+const productRouter = require("./routes/product.route.js")
 
 app.use(cors())
 app.use(json())
 app.use("/api",menuRouter)
 app.use("/",userRouter)
+app.use("/",productRouter)
 
 
 

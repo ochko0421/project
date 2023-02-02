@@ -6,7 +6,7 @@ const file = process.cwd() + "/data/users.json";
 const uniqueRandomID = uuid.v4()
 
 exports.create=(req,res)=>{
-    const {email} = req.body
+    const {name} = req.body
     console.log(req.body)
 
     fs.readFile(file,"utf-8",(readErr,data)=>{
@@ -18,7 +18,7 @@ exports.create=(req,res)=>{
 
         const newUser = {
             id:uniqueRandomID,
-            email,
+            name
         }
 
         obj.push(newUser)
@@ -32,6 +32,33 @@ exports.create=(req,res)=>{
         })
     })
 }
+exports.update = (req, res) => {
+    const { id } = req.params;
+    const {name} = req.body
+    fs.readFile(file, "utf-8", (readErr, data) => {
+      if (readErr) {
+        return res.json({ status: false, message: readErr });
+      }
+  
+      const parsedData = JSON.parse(data);
+  
+      const updateData = parsedData.map((userObj) => {
+        if (userObj.id == id) {
+          return { ...userObj, name};
+        } else {
+          return userObj;
+        }
+      });
+  
+      fs.writeFile(file, JSON.stringify(updateData), (writeErr) => {
+        if (writeErr) {
+          return res.json({ status: false, message: writeErr });
+        }
+  
+        return res.json({ status: true, result: updateData });
+      });
+    });
+  };
 
 exports.getAll=(req,res)=>{
     fs.readFile(file,"utf-8",(readErr,data)=>{

@@ -1,12 +1,12 @@
-const uuid=require("uuid")
+
 const fs= require("fs")
 
 
 const file = process.cwd() + "/data/products.json";
-const uniqueRandomID = uuid.v4()
+
 
 exports.create=(req,res)=>{
-    const {price} = req.body
+    const {price,id,title,description,category,image,rating,rate,count} = req.body
     console.log(req.body)
 
     fs.readFile(file,"utf-8",(readErr,data)=>{
@@ -14,21 +14,28 @@ exports.create=(req,res)=>{
             res.json({status:"false",message: readErr})
         }
 
-        const obj =data? JSON.parse(data):[]
+        const productObj =data? JSON.parse(data):[]
 
-        const newUser = {
-            id:uniqueRandomID,
+        const newProduct = {
             price,
+            id,
+            title,
+            description,
+            category,
+            image,
+            rating,
+            rate,
+            count
         }
 
-        obj.push(newUser)
+        productObj.push(newProduct)
 
-        fs.writeFile(file,JSON.stringify(obj),(err)=>{
+        fs.writeFile(file,JSON.stringify(productObj),(err)=>{
             if(err){
                 res.json({status:"false",message:err})
             }
 
-            res.json({status:true,result:obj})
+            res.json({status:true,result:productObj})
         })
     })
 }

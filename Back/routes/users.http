@@ -3,9 +3,19 @@
 POST http://localhost:8000/user
 Content-Type: application/json
 
+{
+    "name":"Bayar"
+}
+
 ###
 GET http://localhost:8000/user
 
 ###
-DELETE http://localhost:8000/user/1
+DELETE http://localhost:8000/user/588e7e8f-a80c-43f8-ae2a-7c0e5f973d4b
 
+
+###
+PUT http://localhost:8000/user/ac7e1570-a706-42d9-9df2-75192a4a352c
+Content-Type: application/json
+
+{"name":""}

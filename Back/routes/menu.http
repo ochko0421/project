@@ -12,3 +12,11 @@ Content-Type: application/json
 
 ###
 DELETE http://localhost:8000/api/menu/72577aca-1aa5-46da-92b1-e8f042ec9586
+
+###
+put http://localhost:8000/api/menu/f34caffb-4301-4970-8819-6c0325875adf
+Content-Type: application/json
+
+{
+    "menuName":"Product"
+    }
