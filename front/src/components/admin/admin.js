@@ -25,23 +25,20 @@ export default function Admin() {
 
 
     return <div>
-        <div className="navbar bg-dark">
-            <div className="container">
+       
+        <div className="container">
+            <div className="row">
+                <div className="col-md-2">
+                <div className="nav flex-column">
                 {menu.map((e, i) => {
-                    return <Link className="navbar-brand text-white" to={e.link} key={i}>
+                    return <Link className="navbar-brand" style={{color:"#a83248"}} to={e.link} key={i}>
                         {e.menuName}
                     </Link>
                 })}
-            </div>
-
-
-
-        </div>
-        <div className="container">
-            <div className="row">
-                <div className="col-md-10">
-               <Outlet/>
                 </div>
+               
+                </div>
+                <div className="col-md-10"><Outlet/></div>
             </div>
         </div>
 
