@@ -6,7 +6,7 @@ const file = process.cwd() + "/data/products.json";
 
 
 exports.create=(req,res)=>{
-    const {price,id,title,description,category,image,rating,rate,count} = req.body
+    const {price,title,description,category,image,rating} = req.body
     console.log(req.body)
 
     fs.readFile(file,"utf-8",(readErr,data)=>{
@@ -17,16 +17,14 @@ exports.create=(req,res)=>{
         const productObj =data? JSON.parse(data):[]
 
         const newProduct = {
-            price,
-            id,
+            id:productObj.length+1,
             title,
+            price,
             description,
             category,
             image,
-            rating,
-            rate,
-            count
-        }
+            rating
+            }
 
         productObj.push(newProduct)
 
