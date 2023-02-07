@@ -14,17 +14,17 @@ export default function Product() {
     const handleClose = () => setShow(false);
     const handleShow = () => setShow(true);
 
-    const [rating,setRating]= useState({ 
-        rate: "", 
-        count: "" 
-            })
+    
     const [newobj, setNewobj] = useState({
         title: "",
         price: "",
         description: "",
         category: "",
         image: "",
-        rating:rating
+        rating: {
+            rate:"",
+            count:""
+        }
     })
     
 
@@ -91,6 +91,7 @@ export default function Product() {
             .then(res => {
                 console.log(res.data.result)
                 setItem(res.data.result)
+                console.log(newobj);
                 item.push(newobj)
             })
     }
@@ -105,14 +106,16 @@ export default function Product() {
                 <div className="form">
                     <label>Product name</label>
                     <input value={newobj.title} onChange={(e) => setNewobj({...newobj, title : e.target.value})} className="form-control" />
+                    <label>Item full description</label>
+                    <input value={newobj.description} onChange={(e)=>setNewobj({...newobj, description: e.target.value})} className="form-control"/>
                     <label>Category</label>
                     <input value={newobj.category} onChange={(e) => setNewobj({...newobj, category : e.target.value})} className="form-control" />
                     <label>Price</label>
                     <input value={newobj.price} onChange={(e) => setNewobj({...newobj, price : e.target.value})} type={"number"} className="form-control" />
                     <label>Rating</label>
-                    <input value={rating.rate} onChange={(e) => setRating({...rating, rate : e.target.value})} className="form-control" />
+                    <input value={newobj.rating.rate} onChange={(e) => setNewobj({...newobj,rating:{count:newobj.rating.count,rate:e.target.value}})} className="form-control" />
                     Total Rates
-                    <input value={rating.count} onChange={(e) => setRating({...rating, count : e.target.value})} className="form-control" />
+                    <input value={newobj.rating.count} onChange={(e) => setNewobj({...newobj,rating:{count:e.target.value,rate:newobj.rating.rate} })} className="form-control" />
                     <label>Image</label>
                     <input onChange={(e) => {
                 console.log(e.target.value);
