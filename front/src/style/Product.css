@@ -1,0 +1,14 @@
+.flex {
+  display: flex;
+}
+
+.products {
+  overflow: auto;
+  position: relative;
+}
+
+.productCard {
+  margin: 10px;
+  gap: 20px;
+  overflow-x: scroll;
+}

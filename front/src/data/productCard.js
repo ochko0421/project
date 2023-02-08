@@ -1,0 +1,60 @@
+import { nanoid } from "nanoid"
+
+export const productCard = [
+    {
+      _id: nanoid(),
+      img: require("../assets/page/landing/product1.jpg"),
+      category: "Chair",
+      title: "White Aesthetic Chair",
+      text: "Combination of wood and wool",
+      price: "63.47",
+    },
+    {
+      _id: nanoid(),
+      img: require("../assets/page/landing/product2.png"),
+      category: "Chair",
+      title: "White Aesthetic Chair",
+      text: "Combination of wood and wool",
+      price: "63.47",
+    },
+    {
+      _id: nanoid(),
+      img: require("../assets/page/landing/product3.png"),
+      category: "Chair",
+      title: "White Aesthetic Chair",
+      text: "Combination of wood and wool",
+      price: "63.47",
+    },
+    {
+      _id: nanoid(),
+      img: require("../assets/page/landing/product4.png"),
+      category: "Chair",
+      title: "White Aesthetic Chair",
+      text: "Combination of wood and wool",
+      price: "63.47",
+    },
+    {
+      _id: nanoid(),
+      img: require("../assets/page/landing/product4.png"),
+      category: "Chair",
+      title: "White Aesthetic Chair",
+      text: "Combination of wood and wool",
+      price: "63.47",
+    },
+    {
+      _id: nanoid(),
+      img: require("../assets/page/landing/product4.png"),
+      category: "Chair",
+      title: "White Aesthetic Chair",
+      text: "Combination of wood and wool",
+      price: "63.47",
+    },
+    {
+      _id: nanoid(),
+      img: require("../assets/page/landing/product4.png"),
+      category: "Chair",
+      title: "White Aesthetic Chair",
+      text: "Combination of wood and wool",
+      price: "63.47",
+    },
+];
