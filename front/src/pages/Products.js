@@ -2,8 +2,21 @@ import { productCard } from "../data/productCard";
 import "../App.css";
 import { ProductsPage } from "../data/pagesData";
 import ProductCard from "../components/ProductCard";
-
+import { useEffect,useState } from "react";
+import axios from "axios";
 export const Products = () => {
+  const [item,setItem] = useState([])
+  useEffect(() => {
+    axios.get("http://localhost:8000/product")
+        .then(res => {
+            setItem(res.data.result)
+           
+        })
+
+}
+
+    , [])
+
   return (
     <div className="flex flex-d align-items justify-content">
       {ProductsPage.map((data,index) => (
@@ -39,11 +52,11 @@ export const Products = () => {
             <span>Sort By</span>
           </div>
         </div> */}
-        <div className="productCard">
-          {productCard.map((item,index) => (
-            <ProductCard item={item} key={index} />
-          ))}
-        </div>
+       
+  
+            <ProductCard />
+         
+        
       </div>
     </div>
   );

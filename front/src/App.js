@@ -28,14 +28,14 @@ function App() {
       </Routes>
       </div>
      
-{/*       
+      
       <Routes>
         <Route element={<Admin />} >
           <Route index path="/home" element={<AdminLayout />} />
           <Route path='about' element={<About />} />
           <Route path='/product' element={<ProductAdmin />} />
         </Route>
-      </Routes> */}
+      </Routes>
 
 
     </div>

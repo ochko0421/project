@@ -93,6 +93,7 @@ export default function ProductAdmin() {
                 setItem(res.data.result)
                 console.log(newobj);
                 item.push(newobj)
+                handleClose()
             })
     }
 
