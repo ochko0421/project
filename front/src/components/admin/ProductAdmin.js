@@ -114,9 +114,9 @@ export default function ProductAdmin() {
                     <label>Price</label>
                     <input value={newobj.price} onChange={(e) => setNewobj({...newobj, price : e.target.value})} type={"number"} className="form-control" />
                     <label>Rating</label>
-                    <input value={newobj.rating.rate} onChange={(e) => setNewobj({...newobj,rating:{count:newobj.rating.count,rate:e.target.value}})} className="form-control" />
+                    <input value={newobj.rating.rate} type="number" onChange={(e) => setNewobj({...newobj,rating:{count:newobj.rating.count,rate:e.target.value}})} className="form-control" />
                     Total Rates
-                    <input value={newobj.rating.count} onChange={(e) => setNewobj({...newobj,rating:{count:e.target.value,rate:newobj.rating.rate} })} className="form-control" />
+                    <input value={newobj.rating.count} type="number" onChange={(e) => setNewobj({...newobj,rating:{count:e.target.value,rate:newobj.rating.rate} })} className="form-control" />
                     <label>Image</label>
                     <input onChange={(e) => {
                 console.log(e.target.value);

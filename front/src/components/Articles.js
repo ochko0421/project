@@ -68,8 +68,8 @@ export const Article = () => {
           </div>
         </div>
         <div className="flex flex-d">
-          {articleCard.map((e) => (
-            <div className="flex">
+          {articleCard.map((e,i) => (
+            <div key={i} className="flex">
               <img src={e.img} alt="img" />
               <div >
                 <p>{e.category}</p>

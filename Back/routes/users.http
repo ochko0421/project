@@ -4,14 +4,17 @@ POST http://localhost:8000/user
 Content-Type: application/json
 
 {
-    "name":"Bayar"
+    "name":"Bayar",
+    "isAdmin":true,
+    "username":"bayar0205",
+    "password":"Bayar123"
 }
 
 ###
 GET http://localhost:8000/user
 
 ###
-DELETE http://localhost:8000/user/588e7e8f-a80c-43f8-ae2a-7c0e5f973d4b
+DELETE http://localhost:8000/user/35d8b43d-7959-482f-9e99-488bc2fcf320
 
 
 ###

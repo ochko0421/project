@@ -6,7 +6,7 @@ const file = process.cwd() + "/data/users.json";
 const uniqueRandomID = uuid.v4()
 
 exports.create=(req,res)=>{
-    const {name} = req.body
+    const {name,isAdmin,username,password} = req.body
     console.log(req.body)
 
     fs.readFile(file,"utf-8",(readErr,data)=>{
@@ -18,7 +18,7 @@ exports.create=(req,res)=>{
 
         const newUser = {
             id:uniqueRandomID,
-            name
+            name,isAdmin,username,password
         }
 
         obj.push(newUser)
