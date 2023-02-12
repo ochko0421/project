@@ -1,5 +1,5 @@
 import Admin from './components/admin/admin';
-import './App.css';
+
 import Layout from './components/Layout';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Route, Routes } from 'react-router-dom';
@@ -12,33 +12,33 @@ import { useState } from 'react';
 
 
 function App() {
-  
+
   return (
     <div>
-    
-        
-    
-          <Routes>
-            <Route element={<Layout />}>
-              <Route path="/" element={<Landing />} />
-              <Route path="/products/*" element={<Products />}>
-                <Route path="card" element={<Product />} />
-              </Route>
-              <Route path="/services" element={<Services />} />
-              <Route path="/article" element={<Article />} />
-              <Route path="/about-us" element={<AboutUs />} />
-            </Route>
 
 
-            <Route element={<Admin />} >
-            <Route index path="/home" element={<AdminLayout />} />
-            <Route path='/about' element={<About />} />
-            <Route path='/product' element={<ProductAdmin />} />
+
+      <Routes>
+        <Route element={<Layout />}>
+          <Route path="/" element={<Landing />} />
+          <Route path="/products/*" element={<Products />}>
+            <Route path="card" element={<Product />} />
           </Route>
-          </Routes>
-      
-      
-     
+          <Route path="/services" element={<Services />} />
+          <Route path="/article" element={<Article />} />
+          <Route path="/about-us" element={<AboutUs />} />
+        </Route>
+
+
+        <Route element={<Admin />} >
+          <Route index path="/home" element={<AdminLayout />} />
+          <Route path='/about' element={<About />} />
+          <Route path='/product' element={<ProductAdmin />} />
+        </Route>
+      </Routes>
+
+
+
     </div>
   );
 }
