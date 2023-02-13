@@ -6,7 +6,7 @@ Content-Type: application/json
 {
     "name":"Bayar",
     "isAdmin":true,
-    "username":"bayar0205",
+    "username":"bayar0206",
     "password":"Bayar123"
 }
 
@@ -14,7 +14,7 @@ Content-Type: application/json
 GET http://localhost:8000/user
 
 ###
-DELETE http://localhost:8000/user/35d8b43d-7959-482f-9e99-488bc2fcf320
+DELETE http://localhost:8000/user/ee9aa93d-b408-4e2a-b5d3-d94fb98e9a70
 
 
 ###

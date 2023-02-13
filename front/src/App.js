@@ -8,7 +8,7 @@ import About from './components/admin/About';
 import ProductAdmin from './components/admin/ProductAdmin';
 import { Product } from "./components"
 import { Landing, Products, Services, Article, AboutUs } from "./pages";
-import { useState } from 'react';
+import Signup from './components/Signup';
 
 
 function App() {
@@ -28,7 +28,7 @@ function App() {
           <Route path="/article" element={<Article />} />
           <Route path="/about-us" element={<AboutUs />} />
         </Route>
-
+      <Route exact path='/signup' element={<Signup/>}/>
 
         <Route element={<Admin />} >
           <Route index path="/home" element={<AdminLayout />} />

@@ -1,5 +1,4 @@
 
 
-export default function AdminLayout() {
-  
+export default function AdminLayout() { return ("Welcome to Admin Page")
 }
