@@ -3,19 +3,30 @@
 .align-items {align-items: center;}
 .justify-content {justify-content: center;}
 .space-between {justify-content: space-between;}
-
+.bg-light{background-color: #F3F3F3;}
 .benefitsCategory{
     color: #ffb23f;
 }
-
+.text1{
+    width: 505px;
+    height: 96px;
+    
+}
 .benefitsText{
-    color: #afadb5
+    color: #afadb5;
+  
 }
 
 .benefits{
     width: 394px;
     height: 285px;
     padding: 5px;
-    border: 2px solid brown;
+    
     box-shadow: 5px 0 .5em #afadb5;
+}
+.benefits1{
+    width:  1280px;
+}
+.benefits0{
+    width: 1280px;
 }

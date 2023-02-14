@@ -7,8 +7,18 @@
   position: relative;
 }
 
-.productCard {
+.productCards {
   margin: 10px;
   gap: 20px;
   overflow-x: scroll;
+}
+.productTitle{
+  color: #ffb23f;
+  margin-top: 200px;
+}
+.productSpan{
+  margin-top: 30px;
+  color:#AFADB5;
+  width: 656px;
+  height: 64px;
 }

@@ -24,20 +24,22 @@ const BenefitsCard = [
 
 export const Benefits = () => {
   return (
-    <div className="flex flex-d align-items justify-content">
-      <div className="flex align-items justify-content">
-        <div>
-          <span className="textCategory">benefits</span>
+    <div className="container ">
+      <div className=" benefits0 ">
+        <span className="textCategory">Benefits</span>
+        <div className="flex space-between">
+
           <h2>Benefits when using our services</h2>
+          <div className="text1">
+            <span className="benefitsText ">
+              Pellentesque etiam blandit in tincidunt at donec. Eget ipsum
+              dignissim placerat nisi, adipiscing mauris non purus parturient.
+            </span>
+          </div>
         </div>
-        <div>
-          <span className="benefitsText">
-            Pellentesque etiam blandit in tincidunt at donec. Eget ipsum
-            dignissim placerat nisi, adipiscing mauris non purus parturient.
-          </span>
-        </div>
+
       </div>
-      <div className="flex space-between">
+      <div className="benefits1 flex space-between">
         {BenefitsCard.map((e, index) => (
           <div className="benefits" key={index}>
             <img src={e.img} alt="" />

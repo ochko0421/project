@@ -6,19 +6,27 @@ Content-Type: application/json
 {
     "name":"Bayar",
     "isAdmin":true,
-    "username":"bayar0206",
-    "password":"Bayar123"
+    "username":"bayar0230",
+    "password":"123456"
 }
 
 ###
 GET http://localhost:8000/user
 
 ###
-DELETE http://localhost:8000/user/ee9aa93d-b408-4e2a-b5d3-d94fb98e9a70
-
+DELETE http://localhost:8000/user/84492a02-487a-493c-b17c-36585823ac32
 
 ###
 PUT http://localhost:8000/user/ac7e1570-a706-42d9-9df2-75192a4a352c
 Content-Type: application/json
 
 {"name":""}
+
+### 
+POST http://localhost:8000/user/login
+Content-Type: application/json
+
+{
+    "username":"ochko",
+    "password":"ochko123"
+}

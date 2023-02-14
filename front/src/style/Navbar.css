@@ -14,9 +14,9 @@
   justify-content: space-between;
 }
 
-nav {
-  width: 1240px;
-  background-color: whitesmoke;
+.navbar {
+  
+  border-bottom:1px solid whitesmoke;
   height: 100px;
 }
 
